@@ -1,0 +1,10 @@
+<h1>Details of your task</h1>
+
+<h2><%= @task.title %></h2>
+<p>Details: <%= @task.details %></p>
+
+<%= link_to "Edit your task here", edit_task_path %>
+
+<p><%= link_to "Delete #{@task.title}", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %></p>
+
+<%= link_to "Go back to all tasks", tasks_path %>
